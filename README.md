@@ -55,7 +55,7 @@ python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_ever
 
 |Models | Webqsp| CWQ | MetaQA-3hop|
 |:---:|:---:|:---:|:---:|
-|KV-Mem| 46.7 | 21.1| 82.7 | 48.9 | |
+|KV-Mem| 46.7 | 21.1| 48.9 |
 |GraftNet| 66.4 | 32.8 |77.7 |
 |PullNet| 68.1 |  45.9 | 91.4| 
 |NSM-distill| 74.3 | 48.8 | **98.9** |
