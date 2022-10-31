@@ -30,10 +30,10 @@ python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_ever
 
 To run CWQ:
 ```
-python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_every 2 --data_folder data/CWQ/ --lm sbert --num_iter 2 --num_ins 3 --num_gnn 3 --relation_word_emb True --experiment_name CWQ --name cwq
+python main.py ReaRev --entity_dim 50 --num_epoch 100 --batch_size 8 --eval_every 2 --data_folder data/CWQ/ --lm sbert --num_iter 2 --num_ins 3 --num_gnn 3 --relation_word_emb True --experiment_name CWQ --name cwq
 ```
 
-For MetaQA-3, we use the lstm encoder (--lm lstm). For incomplete Webqsp, see  'data/incomplete/'.
+For MetaQA-3, we use the lstm encoder (--lm lstm). For incomplete Webqsp, see  'data/incomplete/'. If you cannot afford a lot of memory for CWQ, use the '--data_eff' argument (see our arguments in `parsing.py').
 
 ## Results
 
@@ -50,7 +50,7 @@ python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_ever
 
 To reproduce CWQ results, run:
 ```
-python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_every 2 --data_folder .data/CWQ/ --lm sbert --num_iter 2 --num_ins 3 --num_gnn 3 --relation_word_emb True --load_experiment ReaRev_CWQ.ckpt --is_eval --name cwq
+python main.py ReaRev --entity_dim 50 --num_epoch 100 --batch_size 8 --eval_every 2 --data_folder .data/CWQ/ --lm sbert --num_iter 2 --num_ins 3 --num_gnn 3 --relation_word_emb True --load_experiment ReaRev_CWQ.ckpt --is_eval --name cwq
 ```
 
 |Models | Webqsp| CWQ | MetaQA-3hop|
