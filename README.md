@@ -2,6 +2,7 @@
 This is the code for the EMNLP 2022 Findings paper: [ReaRev: Adaptive Reasoning for Question Answering over Knowledge
 Graphs](https://arxiv.org/abs/2210.13650).
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rearev-adaptive-reasoning-for-question/semantic-parsing-on-webquestionssp)](https://paperswithcode.com/sota/semantic-parsing-on-webquestionssp?p=rearev-adaptive-reasoning-for-question)
 
 ## Overview 
 Our methods improves instruction decoding and execution for KGQA via adaptive reasoning, as shown:
