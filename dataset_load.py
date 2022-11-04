@@ -13,7 +13,10 @@ from transformers import AutoTokenizer
 import time
 
 import os
-os.environ['TRANSFORMERS_CACHE'] = '/export/scratch/costas/home/mavro016/.cache'
+try:
+    os.environ['TRANSFORMERS_CACHE'] = '/export/scratch/costas/home/mavro016/.cache'
+except:
+    pass
 
 
 class BasicDataLoader(object):
