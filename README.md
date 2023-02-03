@@ -26,15 +26,25 @@ __Acknowledgements__:
 
 To run Webqsp:
 ```
-python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_every 2 --data_folder data/webqsp/ --lm sbert --num_iter 3 --num_ins 2 --num_gnn 2 --relation_word_emb True --experiment_name Webqsp322 --name webqsp
+python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_every 2 \ 
+--data_folder data/webqsp/ --lm sbert --num_iter 3 --num_ins 2 --num_gnn 2 \
+--relation_word_emb True --experiment_name Webqsp322 --name webqsp
 ```
 
 To run CWQ:
 ```
-python main.py ReaRev --entity_dim 50 --num_epoch 100 --batch_size 8 --eval_every 2 --data_folder data/CWQ/ --lm sbert --num_iter 2 --num_ins 3 --num_gnn 3 --relation_word_emb True --experiment_name CWQ --name cwq
+python main.py ReaRev --entity_dim 50 --num_epoch 100 --batch_size 8 --eval_every 2 \
+--data_folder data/CWQ/ --lm sbert --num_iter 2 --num_ins 3 --num_gnn 3 \
+--relation_word_emb True --experiment_name CWQ --name cwq
+```
+To run MetaQA-3:
+```
+python main.py ReaRev --entity_dim 50 --num_epoch 10 --batch_size 8 --eval_every 2  \
+--data_folder data/metaqa-3hop/  --lm lstm --num_iter 2 --num_ins 3 --num_gnn 3  \
+--relation_word_emb False --experiment_name metaqa3 --name metaqa 
 ```
 
-For MetaQA-3, we use the lstm encoder (--lm lstm). For incomplete Webqsp, see  'data/incomplete/'. If you cannot afford a lot of memory for CWQ, use the '--data_eff' argument (see our arguments in `parsing.py').
+For incomplete Webqsp, see  'data/incomplete/' (after obtaining them by [GraftNet](https://github.com/haitian-sun/GraftNet)). If you cannot afford a lot of memory for CWQ, use the '--data_eff' argument (see our arguments in `parsing.py').
 
 ## Results
 
@@ -46,7 +56,7 @@ python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_ever
 ```
 or
 ```
-python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_every 2 --data_folder ../../../Reason_KGQA/data/webqsp/ --lm sbert --num_iter 3 --num_ins 2 --num_gnn 2 --relation_word_emb True --load_experiment ReaRev_webqsp_v2.ckpt --is_eval --name webqsp
+python main.py ReaRev --entity_dim 50 --num_epoch 200 --batch_size 8 --eval_every 2 --data_folder data/webqsp/ --lm sbert --num_iter 3 --num_ins 2 --num_gnn 2 --relation_word_emb True --load_experiment ReaRev_webqsp_v2.ckpt --is_eval --name webqsp
 ```
 
 To reproduce CWQ results, run:
