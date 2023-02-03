@@ -75,7 +75,7 @@ python main.py ReaRev --entity_dim 50 --num_epoch 100 --batch_size 8 --eval_ever
 ## Cite
 If you find our code or method useful, please cite our work as
 ```
-@@article{mavromatis2022rearev,
+@article{mavromatis2022rearev,
   title={ReaRev: Adaptive Reasoning for Question Answering over Knowledge Graphs},
   author={Mavromatis, Costas and Karypis, George},
   journal={arXiv preprint arXiv:2210.13650},
