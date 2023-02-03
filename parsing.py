@@ -1,6 +1,14 @@
 import argparse
 import sys
 
+def bool_flag(v):
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+        
 def add_shared_args(parser):
     parser.add_argument('--name', default='webqsp', type=str)
     parser.add_argument('--data_folder', default='data/webqsp/', type=str)
@@ -13,7 +21,7 @@ def add_shared_args(parser):
     parser.add_argument('--char2id', default='chars.txt', type=str)
     parser.add_argument('--entity_emb_file', default=None, type=str)
     parser.add_argument('--relation_emb_file', default=None, type=str)
-    parser.add_argument('--relation_word_emb', default=False, type=bool)
+    parser.add_argument('--relation_word_emb', default=False, type=bool_flag)
     parser.add_argument('--word_emb_file', default='word_emb.npy', type=str)
     parser.add_argument('--rel_word_ids', default='rel_word_idx.npy', type=str)
     parser.add_argument('--kge_frozen', default=0, type=int)
@@ -71,7 +79,7 @@ def create_parser_rearev(parser):
     parser.add_argument('--num_ins', default=3, type=int)
     parser.add_argument('--num_gnn', default=3, type=int)
     parser.add_argument('--loss_type', default='kl', type=str)
-    parser.add_argument('--use_self_loop', default=True, type=bool)
-    parser.add_argument('--normalized_gnn', default=False, type=bool)
+    parser.add_argument('--use_self_loop', default=True, type=bool_flag)
+    parser.add_argument('--normalized_gnn', default=False, type=bool_flag)
     parser.add_argument('--data_eff', action='store_true')
     add_shared_args(parser)
