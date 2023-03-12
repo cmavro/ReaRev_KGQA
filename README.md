@@ -82,3 +82,18 @@ If you find our code or method useful, please cite our work as
   year={2022}
 }
 ```
+or
+```
+@inproceedings{mavromatis-karypis-2022-rearev,
+    title = "{R}ea{R}ev: Adaptive Reasoning for Question Answering over Knowledge Graphs",
+    author = "Mavromatis, Costas  and
+      Karypis, George",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.findings-emnlp.181",
+    pages = "2447--2458",
+}
+```
